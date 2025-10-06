@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { InputField } from "../../shared/components/Input/Input"
-import { ButtonPlus, QuestionHelpToggle } from "../../shared/components";
+import { ButtonPlus, QuestionHelpToggleWithText } from "../../shared/components";
 import { useTranslation } from "react-i18next";
 
 
@@ -30,7 +30,8 @@ export const ClientsAndPaymentGateways = () => {
                 <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                         <div className="font-medium text-xl">{t('clients')}</div>
-                        <QuestionHelpToggle />
+                        {/* <QuestionHelpToggle /> */}
+                        <QuestionHelpToggleWithText text={"TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT"} />
                     </div>
                     <ButtonPlus />
 
@@ -50,7 +51,8 @@ export const ClientsAndPaymentGateways = () => {
                 <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                         <div className="font-medium text-xl">{t('payment_gateways')}</div>
-                        <QuestionHelpToggle />
+                        {/* <QuestionHelpToggle /> */}
+                        <QuestionHelpToggleWithText text={"TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT"} />
                     </div>
                     <ButtonPlus />
                 </div>

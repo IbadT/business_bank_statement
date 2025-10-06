@@ -10,9 +10,9 @@ export const HomePage = () => {
     const [activeStep, setActiveStep] = useState(1);
     const { t } = useTranslation();
     return (
-        <div className="h-full flex flex-col gap-6">
+        <div className="min-h-screen flex flex-col">
             <BBSHeader setActiveStep={setActiveStep} />
-            <div className="h-full flex gap-6">
+            <div className="flex-1 flex gap-6">
                 <div className="w-1/4 p-5 border-r-2 border-gray-200">
                     {businessBankStatementList.map((item) => (
                         <div 

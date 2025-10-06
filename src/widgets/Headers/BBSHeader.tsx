@@ -1,9 +1,13 @@
-import { FaAngleLeft, FaAngleDown } from "react-icons/fa6";
+import { FaAngleLeft, FaAngleDown, FaAngleUp } from "react-icons/fa6";
 import { HeaderButtons } from "../../shared/components/Button/HeaderButtons";
 import { OrderSummaryDropdown } from "../../shared/components/OrderSummaryDropdown";
 import { useState, type FC } from "react";
 import { useTranslation } from "react-i18next";
 
+
+
+
+// !!!!!! ПРОВЕРИТЬ ЛОГИКУ ОТКРЫТИЯ И ЗАКРЫТИЯ DROPDOWN !!!!!!
 
 interface BBSHeaderProps {
     setActiveStep: (prevStep: (prev: number) => number) => void;
@@ -12,6 +16,7 @@ interface BBSHeaderProps {
 export const BBSHeader: FC<BBSHeaderProps> = ({ setActiveStep }) => {
     const { t } = useTranslation();
     const [isOpenOrderSummary, setIsOpenOrderSummary] = useState(false);
+
     return (
         <div className="flex justify-between items-center">
             <div className="flex items-center gap-1 text-xl font-bold">
@@ -29,7 +34,9 @@ export const BBSHeader: FC<BBSHeaderProps> = ({ setActiveStep }) => {
                         text={
                             <div className="flex items-center gap-2">
                                 {t('order_summary')} 
-                                <FaAngleDown />
+                                {
+                                    isOpenOrderSummary ? <FaAngleUp /> : <FaAngleDown />
+                                }
                             </div>
                         } 
                         color="secondary" 

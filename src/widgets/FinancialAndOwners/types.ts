@@ -15,3 +15,8 @@ export interface OwnerData {
     ownerMonthlyNetProfitPercent: string;
     industry: string;
 };
+
+export interface Industry {
+    id: number;
+    name: string;
+};

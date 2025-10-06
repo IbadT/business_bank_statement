@@ -58,6 +58,24 @@ const resources = {
       api_access: "API Access",
 
       total: "Total",
+
+      month_and_year: "Month and Year",
+      cvv: "CVV",
+      quick_month_list: "Quick Month List",
+      opening_balance: "Opening Balance",
+      closing_balance: "Closing Balance",
+      linked_card_number: "Linked Card Number",
+      linked_card_holder_name: "Linked Card Holder Name",
+      start_month: "Start Month",
+      end_month: "End Month",
+      optional: "Optional; auto-generated if empty",
+      expense_type: "Expense Type",
+      expenses_date: "Expenses Date",
+      expenses_counter_party: "Expenses Counter Party",
+      expenses_amount: "Expenses Amount",
+
+      counter_party: "Counter Party",
+      optional_auto_generated: "Optional; auto-generated if empty",
     }
   },
   ru: {
@@ -114,6 +132,25 @@ const resources = {
       api_access: "API доступ",
 
       total: "Итого",
+
+      month_and_year: "Месяц и год",
+      cvv: "CVV",
+      quick_month_list: "Быстрый список месяцев",
+      opening_balance: "Начальный баланс",
+      closing_balance: "Конечный баланс",
+      linked_card_number: "Номер связанной карты",
+      linked_card_holder_name: "Имя владельца связанной карты",
+      start_month: "Начальный месяц",
+      end_month: "Конечный месяц",
+      optional: "Необязательно; автоматически генерируется, если пусто",
+      expense_type: "Тип расхода",
+      expenses_date: "Дата расхода",
+      expenses_counter_party: "Контрагент расхода",
+      expenses_amount: "Сумма расхода",
+      amount: "Сумма",
+      counter_party: "Контрагент",
+      date: "Дата",
+      optional_auto_generated: "Необязательно; автоматически генерируется, если пусто",
     }
   },
   fr: {
@@ -170,6 +207,25 @@ const resources = {
       api_access: "API Access",
 
       total: "Total",
+
+      month_and_year: "Month and Year",
+      cvv: "CVV",
+      quick_month_list: "Quick Month List",
+      opening_balance: "Opening Balance",
+      closing_balance: "Closing Balance",
+      linked_card_number: "Linked Card Number",
+      linked_card_holder_name: "Linked Card Holder Name",
+      start_month: "Start Month",
+      end_month: "End Month",
+      optional: "Optional; auto-generated if empty",
+      expense_type: "Expense Type",
+      expenses_date: "Expenses Date",
+      expenses_counter_party: "Expenses Counter Party",
+      expenses_amount: "Expenses Amount",
+      amount: "Amount",
+      date: "Date",
+      counter_party: "Counter Party",
+      optional_auto_generated: "Optional; auto-generated if empty",
     }
   }
 };
