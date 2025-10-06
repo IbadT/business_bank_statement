@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { InputField } from "../../shared/components/Input/Input";
+import { useTranslation } from "react-i18next";
 
 
 export interface IContractors {
@@ -8,6 +9,7 @@ export interface IContractors {
 }
 
 export const Contractors = () => {
+    const { t } = useTranslation();
     const [contractors, setContractors] = useState<IContractors>({
         contractorName: "",
         industry: "",
@@ -24,9 +26,9 @@ export const Contractors = () => {
     return (
         <div className="flex flex-col gap-6 max-w-2/3">
             <div className="flex flex-col gap-3">
-                <div className="font-medium text-xl">Contractors</div>
+                <div className="font-medium text-xl">{t('contractors')}</div>
                 <InputField
-                    placeholder="Contractor Name"
+                    placeholder={t('contractor_name')}
                     value={contractors.contractorName}
                     name="contractorName"
                     onChange={handleChange}
@@ -34,7 +36,7 @@ export const Contractors = () => {
                 />
                 
                 <InputField
-                    placeholder="Industry"
+                    placeholder={t('industry')}
                     value={contractors.industry}
                     name="industry"
                     onChange={handleChange}

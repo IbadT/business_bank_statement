@@ -3,10 +3,12 @@ import { BBSHeader } from "../../widgets/Headers/BBSHeader"
 import { useState } from "react";
 import { MdDone } from "react-icons/md";
 import { businessBankStatementList } from "./constants";
+import { useTranslation } from 'react-i18next';
 
 
 export const HomePage = () => {
     const [activeStep, setActiveStep] = useState(1);
+    const { t } = useTranslation();
     return (
         <div className="h-full flex flex-col gap-6">
             <BBSHeader setActiveStep={setActiveStep} />
@@ -33,7 +35,7 @@ export const HomePage = () => {
                                 activeStep > item.id ? <div className="flex items-center justify-center bg-[var(--primary-second-yellow-color)] w-5 h-5 rounded-full"><MdDone /></div>
                                 : <div>{item.id}</div>
                             }
-                            <div>{item.text}</div>
+                            <div>{t(item.text_key)}</div>
                         </div>
                     ))}
                 </div>

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FaAngleDown } from "react-icons/fa6";
+import { useTranslation } from 'react-i18next';
 
 interface Language {
     id: number;
@@ -14,18 +15,22 @@ const languageList: Language[] = [
 ];
 
 export const LanguageSwitch = () => {
+    const { i18n } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
-    const [selectedLanguage, setSelectedLanguage] = useState(languageList[0]);
+    
+    // !!!! ВЫНЕСТИ В localstorage !!!
+    const currentLanguage = languageList.find(lang => lang.code === i18n.language) || languageList[0];
+    // !!!! ВЫНЕСТИ В localstorage !!!
 
     const handleSelectLanguage = (language: Language) => {
-        setSelectedLanguage(language);
+        i18n.changeLanguage(language.code);
         setIsOpen(false);
     }
 
     return (
         <div className="relative min-w-16">
             <div onClick={() => setIsOpen(prev => !prev)} className="font-semibold flex items-center gap-2 p-2 rounded-md border border-transparent hover:border-gray-300 cursor-pointer transition-all duration-100">
-                <div>{selectedLanguage.name}</div>
+                <div>{currentLanguage.name}</div>
                 <FaAngleDown />
             </div>
 

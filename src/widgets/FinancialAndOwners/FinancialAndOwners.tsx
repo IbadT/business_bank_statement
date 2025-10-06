@@ -3,6 +3,7 @@ import { InputField } from "../../shared/components/Input/Input"
 import { b2bOrb2c } from "./constants";
 import type { FinancialAndOwnersData, IB2BOrB2C, OwnerData } from "./types";
 import { QuestionHelpToggle } from "../../shared/components/QuestionHelpToggle/QuestionHelpToggle";
+import { useTranslation } from 'react-i18next';
 
 
 
@@ -11,6 +12,7 @@ import { QuestionHelpToggle } from "../../shared/components/QuestionHelpToggle/Q
 
 
 export const FinancialAndOwners = () => {
+    const { t } = useTranslation();
     const [data, setData] = useState<FinancialAndOwnersData>({
         monthlyTurnover: "",
         monthlyNetProfitPercent: "",
@@ -44,11 +46,11 @@ export const FinancialAndOwners = () => {
         <div className="flex flex-col gap-6 max-w-2/3">
             <div className="flex flex-col gap-3">
                 <div className="flex items-center justify-between">
-                    <div className="font-medium text-xl">Financial Snapshot</div>
+                    <div className="font-medium text-xl">{t('financial_snapshot')}</div>
                     <QuestionHelpToggle />
                 </div>
                 <InputField
-                    placeholder="Monthly Turnover ($)"
+                    placeholder={t('monthly_turnover')}
                     value={data.monthlyTurnover}
                     name="monthlyTurnover"
                     onChange={handleChangeData}
@@ -56,7 +58,7 @@ export const FinancialAndOwners = () => {
                 />
 
                 <InputField
-                    placeholder="Monthly Net Profit (%)"
+                    placeholder={t('monthly_net_profit_percent')}
                     value={data.monthlyNetProfitPercent}
                     name="monthlyNetProfitPercent"
                     onChange={handleChangeData}
@@ -64,7 +66,7 @@ export const FinancialAndOwners = () => {
                 />
 
                 <InputField
-                    placeholder="Industry (NAICS)"
+                    placeholder={t('industry')}
                     value={data.industry}
                     name="industry"
                     onChange={handleChangeData}
@@ -74,11 +76,11 @@ export const FinancialAndOwners = () => {
 
             <div className="flex flex-col gap-3">
                 <div className="flex items-center justify-between">
-                    <div className="font-medium text-xl">Owner Info</div>
+                    <div className="font-medium text-xl">{t('owner_info')}</div>
                     <QuestionHelpToggle />
                 </div>
                 <InputField
-                    placeholder="Owner Name"
+                    placeholder={t('owner_name')}
                     value={ownerData.ownerName}
                     name="ownerName"
                     onChange={handleChangeOwnerData}
@@ -86,7 +88,7 @@ export const FinancialAndOwners = () => {
                 />
 
                 <InputField
-                    placeholder="Monthly Net Profit (%)"
+                    placeholder={t('monthly_net_profit_percent')}
                     value={ownerData.ownerMonthlyNetProfitPercent}
                     name="ownerMonthlyNetProfitPercent"
                     onChange={handleChangeOwnerData}
@@ -94,7 +96,7 @@ export const FinancialAndOwners = () => {
                 />
 
                 <InputField
-                    placeholder="Industry (NAICS)"
+                    placeholder={t('industry')}
                     value={ownerData.industry}
                     name="industry"
                     onChange={handleChangeOwnerData}
