@@ -13,7 +13,7 @@ export const HomePage = () => {
         <div className="h-full flex flex-col gap-6">
             <BBSHeader setActiveStep={setActiveStep} />
             <div className="h-full flex gap-6">
-                <div className="w-1/4 pl-5 border-l-2 border-gray-200">
+                <div className="w-1/4 p-5 border-r-2 border-gray-200">
                     {businessBankStatementList.map((item) => (
                         <div 
                             key={item.id} 

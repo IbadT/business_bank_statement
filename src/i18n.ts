@@ -26,6 +26,8 @@ const resources = {
       top_ups_and_expenses: "Top-ups & Expenses",
       review_and_checkout: "Review & Checkout",
 
+      pay_and_generate: "Pay & Generate",
+
       profile: "Profile",
       company_name: "Company Name",
       state: "State",
@@ -48,6 +50,14 @@ const resources = {
       save_draft: "Save Draft",
       order_summary: "Order Summary",
       continue: "Continue",
+
+      basic_bank_statement: "Basic Bank Statement",
+      advanced_analytics: "Advanced Analytics",
+      priority_support: "Priority Support",
+      data_export: "Data Export",
+      api_access: "API Access",
+
+      total: "Total",
     }
   },
   ru: {
@@ -80,6 +90,8 @@ const resources = {
       zip_code: "Почтовый индекс",
       account_number: "Номер счета",
 
+      pay_and_generate: "Оплатить и сгенерировать",
+
       financial_snapshot: "Финансовый снимок",
       owner_info: "Информация о владельце",
       monthly_net_profit_percent: "Ежемесячная чистая прибыль (%)",
@@ -94,6 +106,14 @@ const resources = {
       save_draft: "Сохранить черновик",
       order_summary: "Сводка заказа",
       continue: "Продолжить",
+
+      basic_bank_statement: "Базовый банковский отчёт",
+      advanced_analytics: "Расширенный анализ",
+      priority_support: "Приоритетная поддержка",
+      data_export: "Экспорт данных",
+      api_access: "API доступ",
+
+      total: "Итого",
     }
   },
   fr: {
@@ -126,6 +146,8 @@ const resources = {
       zip_code: "Code postal",
       account_number: "Numéro de compte",
 
+      pay_and_generate: "Payer et générer",
+
       financial_snapshot: "Aperçu financier",
       owner_info: "Informations sur le propriétaire",
       monthly_net_profit_percent: "Bénéfice net mensuel (%)",
@@ -140,6 +162,14 @@ const resources = {
       save_draft: "Enregistrer le brouillon",
       order_summary: "Récapitulatif de la commande",
       continue: "Continuer",
+
+      basic_bank_statement: "Basic Bank Statement",
+      advanced_analytics: "Advanced Analytics",
+      priority_support: "Priority Support",
+      data_export: "Data Export",
+      api_access: "API Access",
+
+      total: "Total",
     }
   }
 };

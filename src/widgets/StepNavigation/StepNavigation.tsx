@@ -8,7 +8,7 @@ import { TopUpsAndExpenses } from "../TopUpsAndExpenses";
 
 interface StepNavigationProps {
     step: number;
-}
+};
 
 export const StepNavigation: FC<StepNavigationProps> = ({ step }) => {
     return (
@@ -20,5 +20,5 @@ export const StepNavigation: FC<StepNavigationProps> = ({ step }) => {
             {step === 5 && <TopUpsAndExpenses />}
             {step === 6 && <ReviewAndCheckout />}
         </div>
-    )
-}
+    );
+};

@@ -4,12 +4,12 @@ interface HeaderButtonsProps {
   text: string | React.ReactNode;
   color: HeaderButtonsColor;
   setActiveStep?: (prevStep: (prev: number) => number) => void;
+  onClick?: () => void;
 }
 
-export const HeaderButtons = ({ text, color, setActiveStep }: HeaderButtonsProps) => {
+export const HeaderButtons = ({ text, color, setActiveStep, onClick }: HeaderButtonsProps) => {
     const handleClick = () => {
         setActiveStep?.(prev => prev === 6 ? 6 : prev + 1)
-        console.log("")
     };
 
   return (
@@ -25,7 +25,7 @@ export const HeaderButtons = ({ text, color, setActiveStep }: HeaderButtonsProps
                 : "bg-transparent"
             } cursor-pointer`
         }
-      onClick={handleClick}
+      onClick={onClick ? onClick : handleClick}
     >
       {text}
     </button>
