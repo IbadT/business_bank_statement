@@ -1,4 +1,4 @@
-export * from './CompanyDetails.tsx';
+export * from './CompanyDetails';
 export * from './FinancialAndOwners';
 export * from './ClientsAndPaymentGateways';
 export * from './Contractors';

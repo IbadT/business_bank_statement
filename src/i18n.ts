@@ -29,6 +29,8 @@ const resources = {
       pay_and_generate: "Pay & Generate",
 
       profile: "Profile",
+      full_name: "Full Name",
+      number_of_children: "Number of Children",
       company_name: "Company Name",
       state: "State",
       city: "City",
@@ -76,6 +78,17 @@ const resources = {
 
       counter_party: "Counter Party",
       optional_auto_generated: "Optional; auto-generated if empty",
+
+      personal_details: "Personal Details",
+      employment_income: "Employment & Income",
+      housing_rent_mortgage: "Housing (Rent/Mortgage)",
+      manual_transactions: "Manual Transactions",
+      period_balances: "Period & Balances",
+      review_checkout: "Review & Checkout",
+      personal_information: "Personal Information",
+      do_you_own_a_car: "Do You Own a Car?",
+      do_you_have_a_children: "Do You Have a Children?",
+      number_of_car: "Number of Car",
     }
   },
   ru: {
@@ -101,6 +114,8 @@ const resources = {
       top_ups_and_expenses: "Пополнения и расходы",
       review_and_checkout: "Обзор и оплата",
       profile: "Профиль",
+      full_name: "Имя",
+      number_of_children: "Количество детей",
       company_name: "Название компании",
       state: "Регион",
       city: "Город",
@@ -151,6 +166,17 @@ const resources = {
       counter_party: "Контрагент",
       date: "Дата",
       optional_auto_generated: "Необязательно; автоматически генерируется, если пусто",
+
+      personal_details: "Личные данные",
+      employment_income: "Трудоустройство и доход",
+      housing_rent_mortgage: "Жилье (Аренда/Ипотека)",
+      manual_transactions: "Ручные транзакции",
+      period_balances: "Период и балансы",
+      review_checkout: "Обзор и оплата",
+      personal_information: "Личные данные",
+      do_you_own_a_car: "У вас есть машина?",
+      do_you_have_a_children: "У вас есть дети?",
+      number_of_car: "Количество машин",
     }
   },
   fr: {
@@ -176,6 +202,8 @@ const resources = {
       top_ups_and_expenses: "Ajouts et dépenses",
       review_and_checkout: "Révision et paiement",
       profile: "Profil",
+      full_name: "Nom",
+      number_of_children: "Nombre d'enfants",
       company_name: "Nom de la société",
       state: "Région",
       city: "Ville",
@@ -226,6 +254,17 @@ const resources = {
       date: "Date",
       counter_party: "Counter Party",
       optional_auto_generated: "Optional; auto-generated if empty",
+
+      personal_details: "Détails personnels",
+      employment_income: "Emploi et revenu",
+      housing_rent_mortgage: "Logement (Location/Hypothèque)",
+      manual_transactions: "Transactions manuelles",
+      period_balances: "Période et soldes",
+      review_checkout: "Révision et paiement",
+      personal_information: "Informations personnelles",
+      do_you_own_a_car: "Avez-vous une voiture ?",
+      do_you_have_a_children: "Avez-vous des enfants ?",
+      number_of_car: "Nombre de voitures",
     }
   }
 };
