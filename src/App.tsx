@@ -1,6 +1,15 @@
 import { Route, Routes } from 'react-router'
 import './App.css'
-import { HelpPage, HomePage, PDFsPage, ReferralProgramPage, SettingsPage, WalletAndSubscriptionPage } from './pages'
+import { 
+  HelpPage, 
+  BusinssBankStatementPage, 
+  PDFsPage, 
+  ReferralProgramPage, 
+  SettingsPage, 
+  WalletAndSubscriptionPage, 
+  HomePage, 
+  PersonalBankStatementPage 
+} from './pages'
 import { Layout } from './shared/components/Layout'
 
 function App() {
@@ -8,6 +17,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
+        <Route path="business-bank-statement" element={<BusinssBankStatementPage />} />
+        <Route path="personal-bank-statement" element={<PersonalBankStatementPage />} />
         <Route path="help" element={<HelpPage />} />
         <Route path="pdfs" element={<PDFsPage />} />
         <Route path="referral-program" element={<ReferralProgramPage />} />

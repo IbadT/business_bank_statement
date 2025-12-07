@@ -1,73 +1,248 @@
-# React + TypeScript + Vite
+Урлы для просмотра:
+http://localhost:5173/personal-bank-statement
+http://localhost:5173/business-bank-statement
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🏦 Business Bank Statement Application
 
-Currently, two official plugins are available:
+> Современное веб-приложение для управления банковскими отчетами с поддержкой многоязычности и интуитивным интерфейсом.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Особенности
 
-## React Compiler
+- **🌍 Многоязычность** - Поддержка английского, русского и французского языков
+- **📱 Адаптивный дизайн** - Отлично работает на всех устройствах
+- **⚡ Быстрая разработка** - Vite + React + TypeScript
+- **🎨 Современный UI** - Tailwind CSS с кастомными компонентами
+- **🔄 Плавные анимации** - Интерактивные переходы и эффекты
+- **📊 Пошаговая навигация** - Интуитивный процесс заполнения форм
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠 Технологический стек
 
-## Expanding the ESLint configuration
+### Frontend
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 19** - Современная библиотека для создания пользовательских интерфейсов
+- **TypeScript** - Статическая типизация для надежности кода
+- **Vite** - Быстрый инструмент сборки и разработки
+- **Tailwind CSS** - Utility-first CSS фреймворк
+- **React Router v7** - Маршрутизация для SPA
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Интернационализация
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **i18next** - Мощная библиотека интернационализации
+- **react-i18next** - React интеграция для i18next
+- **i18next-browser-languagedetector** - Автоматическое определение языка браузера
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Иконки
+
+- **React Icons** - Обширная коллекция иконок (Feather, Material Design, Font Awesome)
+
+## 📁 Структура проекта
+
+```
+src/
+├── 📁 app/                    # Redux store и root reducer
+├── 📁 assets/                 # Статические ресурсы
+├── 📁 config/                 # Глобальные конфигурации
+├── 📁 features/               # Feature-based модули
+├── 📁 pages/                  # Страницы приложения
+│   └── 📁 HomePage/           # Главная страница с навигацией
+├── 📁 shared/                 # Переиспользуемые компоненты
+│   ├── 📁 components/         # UI компоненты
+│   │   ├── 📁 Button/         # Кнопки и их вариации
+│   │   ├── 📁 Input/          # Поля ввода
+│   │   ├── 📁 Layout/         # Основная разметка
+│   │   └── 📁 LanguageSwitch/ # Переключатель языков
+│   └── 📁 utils/              # Утилиты и хелперы
+├── 📁 widgets/                # Сложные UI блоки
+│   ├── 📁 Headers/            # Заголовки страниц
+│   ├── 📁 StepNavigation/     # Навигация по шагам
+│   └── 📁 [FeatureWidgets]/  # Виджеты для каждой функции
+└── 📄 i18n.ts                 # Конфигурация интернационализации
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🎯 Основные функции
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 1. 📋 Пошаговое заполнение
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
+- **Детали компании** - Основная информация о бизнесе
+- **Финансы и владельцы** - Финансовая информация и данные владельцев
+- **Клиенты и платежные системы** - Настройка платежных gateway
+- **Контрагенты** - Управление подрядчиками
+- **Пополнения и расходы** - Финансовые операции
+- **Обзор и оплата** - Финальная проверка и оплата
+
+### 2. 🌐 Многоязычность
+
+- **Автоматическое определение языка** - По настройкам браузера
+- **Переключение в реальном времени** - Без перезагрузки страницы
+- **Поддержка 3 языков** - EN, RU, FR
+- **Локализованный контент** - Все тексты переведены
+
+### 3. 💳 Банковские функции
+
+- **Баланс** - Отображение текущего баланса
+- **Штрих-коды** - Генерация и управление
+- **История операций** - Просмотр транзакций
+- **Уведомления** - Статус операций
+
+## 🚀 Быстрый старт
+
+### Предварительные требования
+
+- **Node.js** >= 18.0.0
+- **npm** >= 9.0.0
+
+### Установка
+
+```bash
+# Клонирование репозитория
+git clone <repository-url>
+cd businness_bank
+
+# Установка зависимостей
+npm install
+
+# Запуск в режиме разработки
+npm run dev
+
+# Сборка для продакшена
+npm run build
+
+# Предварительный просмотр сборки
+npm run preview
+```
+
+### Доступные команды
+
+```bash
+npm run dev          # Запуск dev сервера (http://localhost:5173)
+npm run build        # Сборка для продакшена
+npm run preview      # Предварительный просмотр сборки
+npm run lint         # Проверка кода линтером
+```
+
+## 🎨 Дизайн система
+
+### Цветовая палитра
+
+```css
+--primary-yellow-color: #FFD700           /* Основной желтый */
+--primary-second-yellow-color: #F1CF14   /* Вторичный желтый */
+--primary-yellow-text-color-yellow: #9A8722 /* Текст желтый */
+--primary-black-text-color: #181818      /* Основной текст */
+--primary-background-body-color: #F8F8F8 /* Фон страницы */
+--primary-background-menu-color: #FFFFFF /* Фон меню */
+```
+
+### Компоненты
+
+- **Button** - Кнопки с различными стилями (primary, secondary, none)
+- **Input** - Поля ввода с валидацией и анимациями
+- **Layout** - Основная разметка с сайдбаром
+- **LanguageSwitch** - Переключатель языков с выпадающим списком
+- **StepNavigation** - Навигация по шагам с анимацией
+
+## 🔧 Конфигурация
+
+### i18n настройка
+
+```typescript
+// src/i18n.ts
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
+
+i18n.use(LanguageDetector).use(initReactI18next).init({
+  resources: {
+    /* переводы */
+  },
+  fallbackLng: "en",
+  debug: true,
+});
+```
+
+### Vite конфигурация
+
+```typescript
+// vite.config.ts
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
     },
   },
-])
+});
 ```
+
+## 📱 Адаптивность
+
+Приложение полностью адаптивно и оптимизировано для:
+
+- **🖥️ Desktop** - 1920px и выше
+- **💻 Laptop** - 1024px - 1919px
+- **📱 Tablet** - 768px - 1023px
+- **📱 Mobile** - 320px - 767px
+
+## 🚀 Развертывание
+
+### Vercel (рекомендуется)
+
+```bash
+# Установка Vercel CLI
+npm i -g vercel
+
+# Деплой
+vercel --prod
+```
+
+### Netlify
+
+```bash
+# Сборка
+npm run build
+
+# Загрузка папки dist в Netlify
+```
+
+### Docker
+
+```dockerfile
+FROM node:18-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+COPY . .
+RUN npm run build
+EXPOSE 3000
+CMD ["npm", "run", "preview"]
+```
+
+## 🤝 Вклад в проект
+
+1. **Fork** репозитория
+2. Создайте **feature branch** (`git checkout -b feature/amazing-feature`)
+3. **Commit** изменения (`git commit -m 'Add amazing feature'`)
+4. **Push** в branch (`git push origin feature/amazing-feature`)
+5. Откройте **Pull Request**
+
+## 📄 Лицензия
+
+Этот проект лицензирован под MIT License - см. файл [LICENSE](LICENSE) для деталей.
+
+## 👥 Команда
+
+- **Frontend Developer** - React, TypeScript, UI/UX
+- **Backend Developer** - API, Database, Authentication
+- **DevOps Engineer** - Deployment, CI/CD, Infrastructure
+
+## 📞 Поддержка
+
+Если у вас есть вопросы или проблемы:
+
+- 📧 Email: support@businessbank.com
+- 💬 Discord: [Наш сервер](https://discord.gg/businessbank)
+- 📖 Документация: [docs.businessbank.com](https://docs.businessbank.com)
+
+---
+
+**Сделано с ❤️ для современного банкинга**

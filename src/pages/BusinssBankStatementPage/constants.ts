@@ -1,31 +1,31 @@
 export interface BusinessBankStatement {
     id: number;
-    text: string;
+    text_key: string;
 }
 
 export const businessBankStatementList: BusinessBankStatement[] = [
     {
         id: 1,
-        text: " Company Details"
+        text_key: 'company_details'
     },
     {
         id: 2,
-        text: " Financial and Owners"
+        text_key: 'financial_and_owners'
     },
     {
         id: 3,
-        text: "Clients & Payment Gateways"
+        text_key: 'clients_and_payment_gateways'
     },
     {
         id: 4,
-        text: "Contractors"
+        text_key: 'contractors'
     },
     {
         id: 5,
-        text: "Top-ups & Expenses"
+        text_key: 'top_ups_and_expenses'
     },
     {
         id: 6,
-        text: "Review & Checkout"
+        text_key: 'review_and_checkout'
     }
 ]

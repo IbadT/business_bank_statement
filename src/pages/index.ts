@@ -1,5 +1,7 @@
 export * from './HelpPage'
 export * from './HomePage'
+export * from './PersonalBankStatementPage'
+export * from './BusinssBankStatementPage'
 export * from './PDFsPage'
 export * from './ReferralProgramPage'
 export * from './SettingsPage'

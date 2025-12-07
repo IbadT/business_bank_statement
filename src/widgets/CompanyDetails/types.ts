@@ -7,3 +7,16 @@ export interface BusinessBankStatementData {
     zipCode: string;
     accountNumber: string;
 };
+
+export interface Profile {
+  id: number;
+  name: string;
+  lastName: string;
+};
+
+
+
+export interface State {
+  id: number;
+  name: string;
+};

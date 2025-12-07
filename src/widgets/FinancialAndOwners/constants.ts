@@ -1,4 +1,4 @@
-import type { IB2BOrB2C } from "./types";
+import type { IB2BOrB2C, Industry } from "./types";
 
 
 export const b2bOrb2c: IB2BOrB2C[] = [
@@ -12,4 +12,19 @@ export const b2bOrb2c: IB2BOrB2C[] = [
         text: "B2C",
         isSelected: false,
     }
+];
+
+export const industryList: Industry[] = [
+    {
+        id: 1,
+        name: "Industry 1",
+    },
+    {
+        id: 2,
+        name: "Industry 2",
+    },
+    {
+        id: 3,
+        name: "Industry 3",
+    },
 ];
