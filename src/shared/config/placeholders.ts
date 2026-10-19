@@ -1,0 +1,3 @@
+/** Временный текст подсказок, пока нет настоящих описаний полей. */
+export const HELP_TEXT_PLACEHOLDER =
+  "TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT";
